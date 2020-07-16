@@ -6,7 +6,7 @@ en el cuadro de texto "RESULTADO"*/
 function mostrarAumento()
 {
 	var importe;
-	var resultado;
+	//var resultado; tambien se puede hacer asi 
 	var descuento;
 
 	importe = txtIdImporte.value;
@@ -15,9 +15,11 @@ function mostrarAumento()
 
 	descuento = importe * 0.25;
 
-	resultado = importe - descuento;
+	txtIdResultado.value = importe - descuento;
 
-	txtIdResultado.value = resultado;
+	//resultado = importe - descuento; tambien se puede hacer asi
+
+	//txtIdResultado.value = resultado; tambien se puede hacer asi
 
 
 }
