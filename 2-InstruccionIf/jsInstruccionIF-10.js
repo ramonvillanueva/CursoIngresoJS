@@ -20,7 +20,13 @@ function mostrar()
 		}
 	}
 	
-	if (numeroUno ) {}
+	if (numeroUno % 5 == 0 ) {
+		alert(numeroRandomUnoAlCubo);
+	}
+	
+	else {
+		alert("No paso nada");
+	}
 
 
 
@@ -31,4 +37,5 @@ a-Si los dos son pares : multiplicarlos. Mostrar dato
 b-Si los dos son impares restarlos. Mostrar dato
 c-Si alguno es divisible por 5 elevado al cubo. Mostrar dato.
 d-Si no ocurrio ningun caso anterior mostrar "No paso nada"
+e-Mostrar el resultado en un solo alert.
 */
