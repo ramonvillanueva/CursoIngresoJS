@@ -12,7 +12,7 @@ function mostrar()
 
 	if(numeroUno % 2 == 0){
 		if (numeroDos % 2 == 0) { // Es par
-			alert(numeroUno * numeroDos);
+			mensaje = numeroUno * numeroDos;
 		}
 	}else {
 		if (numeroDos % 2 != 0) {
@@ -23,11 +23,8 @@ function mostrar()
 	if (numeroUno % 5 == 0 ) {
 		alert(numeroRandomUnoAlCubo);
 	}
-	
-	else {
-		alert("No paso nada");
-	}
 
+	
 
 
 }//FIN DE LA FUNCIÓN

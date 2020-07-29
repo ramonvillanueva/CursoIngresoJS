@@ -13,14 +13,16 @@ function CalcularPrecio ()
 	var cantidad;
 	var precio;
 
-	precio = cantidad * 35;
-
 	cantidad = txtIdCantidad.value;
 	empresa = Marca.value;
 	precioFinal = txtIdprecioDescuento.value;
 
 	cantidad = parseInt(cantidad);
 	precioFinal = parseFloat(precioFinal);
+
+	
+
+	precio = cantidad * 35;
 
 	if (cantidad >= 6) { //A
 		precioFinal = precio - (precio * 0.5);
@@ -55,7 +57,8 @@ function CalcularPrecio ()
 	}
 
 
+    console.log(precioFinal)
 
 
 }
-// shift alt f para acomodar
+// shift alt f para acomodar / esto no funciona
