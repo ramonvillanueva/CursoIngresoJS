@@ -9,13 +9,13 @@ function mostrar()
 	
 	while(contador < 5){
 		
-		numero= prompt("Ingrese un numero");
-	    numero = parseInt(numero);
+		numeroIngresado = prompt("Ingrese un numero");
+	    numeroIngresado = parseInt(numeroIngresado);
 
-	    if (IsNaN(numero)) {
+	    if (isNaN(numeroIngresado)) {
 	    	continue;
 	    }
-	    acumulador = acumulador + numero;
+	    acumulador = acumulador + numeroIngresado;
 
 	    contador++// el contador conviene ponerle al final
 

@@ -10,11 +10,23 @@ function mostrar()
 		case "Invierno":{
 			switch(destino){
 				case "Bariloche":
-				    precioFinal = estadia + ( estadia + 0.2);
+				    precioFinal = estadia + (estadia * 0.2);
 				    alert(precioFinal);
 				    break;
+				case "Mar del plata":
+				    precioFinal = estadia - (estadia * 0.2);
+				    alert(precioFinal);
+				default: 
+				 precioFinal = estadia - (estadia * 0.1);
+				 alert(precioFinal);
 
-
+			}
+		}
+		case "Verano":{
+			switch(destino){
+				case "Bariloche": 
+				precioFinal = estadia - (estadia * 0.2);
+				alert(precioFinal)
 			}
 		}
 	}

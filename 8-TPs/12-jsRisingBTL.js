@@ -13,6 +13,71 @@ function ComenzarIngreso ()
  	var edadIngresada;
  	var sexoIngresado;
  	var estadoCivilIngresado;
+ 	var sueldoBruto;
+ 	var numeroLegajo;
+ 	var nacionalidad;
+
+
+ 	edadIngresada = prompt("Ingrese su edad");
+ 	edadIngresada = parseInt(edadIngresada);
+ 	while (isNaN(edadIngresada) || edadIngresada < 18 || edadIngresada > 90) {
+ 		edadIngresada = prompt("Ingrese su edad");
+ 		edadIngresada = parseInt(edadIngresada);
+ 	}
+
+ 	sexoIngresado = prompt("Ingrese su sexo"); 
+ 	if (sexoIngresado == "M") {
+ 		txtIdSexo.value = "Masculino";
+ 	}
+ 	if else (sexoIngresado == "F") {
+ 		txtIdSexo.value = "Femenino"
+ 	}
+ 	while (!(sexoIngresado == "M" && sexoIngresado == "F" )) {
+ 		sexoIngresado = prompt("Ingrese su sexo");
+ 	}
+
+ 	estadoCivilIngresado = prompt("Ingrese su estado civil"); 
+ 	estadoCivilIngresado = parseInt(estadoCivilIngresado);
+ 	switch(estadoCivilIngresado) {
+ 		case 1: 
+ 			txtIdEstadoCivil.value = "Soltero";
+ 		case 2: 
+ 		    txtIdEstadoCivil.value = "Casado";
+ 		case 3:
+ 			txtIdEstadoCivil.value = "Divorciado";
+ 		case 4:
+ 			txtIdEstadoCivil.value = "Viudo";
+ 	}	
+ 	while (!(estadoCivilIngresado > 0 && estadoCivilIngresado < 5)) {
+ 		estadoCivilIngresado = prompt("Ingrese su estado civil");
+ 		estadoCivilIngresado = parseInt(estadoCivilIngresado);
+ 	}
+
+ 	sueldoBruto = prompt("Ingrese su sueldo bruto");
+ 	sueldoBruto = parseInt(sueldoBruto);
+ 	while (sueldoBruto < 8000) {
+ 		sueldoBruto = prompt("Ingrese su sueldo bruto");
+ 	    sueldoBruto = parseInt(sueldoBruto);
+ 	}
+
+ 	numeroLegajo = prompt("Ingrese su numero de legajo");
+ 	numeroLegajo = parseInt(numeroLegajo);
+ 	while (numeroLegajo < 1000 || numeroLegajo > 9999) {
+ 		numeroLegajo = prompt("Ingrese su numero de legajo");
+ 	    numeroLegajo = parseInt(numeroLegajo);
+ 	}
+
+ 	nacionalidad = prompt("Ingrese su Nacionalidad ");
+ 	while (!(nacionalidad == "A" || nacionalidad == "E" || nacionalidad == "N" )) {
+ 		nacionalidad = prompt("Ingrese su Nacionalidad ");
+ 	}
+
+ 	txtIdEdad.value = edadIngresada;
+ 	//txtIdSexo.value = sexoIngresado;
+ 	//txtIdEstadoCivil.value = estadoCivilIngresado;
+ 	txtIdSueldo.value = sueldoBruto;
+ 	txtIdLegajo.value = numeroLegajo;
+ 	txtIdNacionalidad = nacionalidad;
 
 
 

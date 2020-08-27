@@ -11,54 +11,32 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 function CalcularPrecio () 
 {
 	var cantidad;
-	var precio;
+	var precioLampara;// valor de las lampras
+	var precio;// importe
+	var empresa; // marca
+	var descuento
 
 	cantidad = txtIdCantidad.value;
+	lampara = 35;
 	empresa = Marca.value;
-	precioFinal = txtIdprecioDescuento.value;
+
+	//precio = cantidad * precioLampara; esto va abajo
 
 	cantidad = parseInt(cantidad);
-	precioFinal = parseFloat(precioFinal);
 
-	
+	switch(cantidad){
+		case 1:
+		case 2:
+		    descuento = 1;
+		    break;
 
-	precio = cantidad * 35;
+		case 5:
+		    switch(empresa){
+		    	case "ArgentinaLuz":
+		    	    descuento = 0.6;
+		    	    break;
+		    }   
 
-	if (cantidad >= 6) { //A
-		precioFinal = precio - (precio * 0.5);
-
-	}else if (cantidad == 5 && empresa == "ArgentinaLuz") { //B
-		precioFinal = precio - (precio * 0.4);
-
-	}else if (cantidad == 5 && empresa != "ArgentinaLuz") {
-		precioFinal = precio - (precio * 0.3);
-
-	}else if (cantidad == 4 && empresa == "ArgentinaLuz" || empresa == "FelipeLamparas") { //C
-		precioFinal = precio - (precio * 0.25);
-
-	}else if (cantidad == 4 && empresa != "ArgentinaLuz" || empresa != "FelipeLamparas") {
-		precioFinal = precio - (precio * 0.2);
-
-	}else if (cantidad == 3 && empresa == "ArgentinaLuz") { //D
-		precioFinal = precio - (precio * 0.15);
-
-	}else if (cantidad == 3 && empresa == "FelipeLamparas") {
-		precioFinal = precio - (precio * 0.1);	
 	}
-	else if (cantidad == 3 && empresa != "ArgentinaLuz" && empresa != "FelipeLamparas") {
-		precioFinal = precio - (precio * 0.05);
-	}
-
-	if (precioFinal > 120) {
-
-		impuesto = precio * 0.1;
-
-		alert("Usted pagó " + impuesto + " de IIBB ");
-	}
-
-
-    console.log(precioFinal)
-
-
 }
 // shift alt f para acomodar / esto no funciona

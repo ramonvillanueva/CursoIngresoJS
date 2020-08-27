@@ -2,6 +2,10 @@ function mostrar()
 {
 	//tomo la hora
 	var horaDelDia =txtIdHora.value;
-	alert(horaDelDia);
-
+	
+	horaDelDia = parseInt(horaDelDia);
+    
+	switch(horaDelDia){
+		
+	}
 }//FIN DE LA FUNCIÓN
